@@ -1,0 +1,56 @@
+body {
+  background: #555;
+  margin-top: 60px;
+}
+
+.stoplight-body {
+  background: #f2b738;
+  border-radius: 8px;
+  border: 3px solid black;
+  margin: 0 auto;
+  max-width: 180px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.stoplight-light {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  position: relative;
+  opacity: .3;
+}
+
+.stoplight-light::before {
+  background: rgba(0, 0, 0, .6);
+  display: block;
+  width: 100px;
+  height: 100px;
+  content: '';
+  border-radius: 100%;
+  position: relative;
+}
+
+.stoplight-light.active::before {
+  z-index: -1;
+}
+
+.stoplight-light.active {
+  opacity: 1;
+  border: 3px solid black;
+}
+
+.stoplight-go {
+  background: #37ba18;
+}
+
+.stoplight-warning {
+  background: #eadd15;
+}
+
+.stoplight-stop {
+  background: #e11d1d;
+}

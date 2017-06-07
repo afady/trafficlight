@@ -1,0 +1,1 @@
+Learning ES6 class syntax
